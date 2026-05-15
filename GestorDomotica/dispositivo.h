@@ -17,6 +17,7 @@ public:
     QString getNombre();
     QString getTipo();
     QString getEstado();
+    void registrarEvento(QString dispositivo, QString accion);
 
 private:
     QString nombre;

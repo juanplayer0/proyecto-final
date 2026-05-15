@@ -41,6 +41,7 @@ void MainWindow::on_pushButton_clicked() {  // Encender
     if (i >= 0) {
         dispositivos[i]->encender();
         db.actualizarEstado(dispositivos[i]);
+        db.registrarEvento(dispositivos[i]->getNombre(), "Encendido");
         actualizarLista();
     }
 }
@@ -50,6 +51,7 @@ void MainWindow::on_pushButton_2_clicked() {  // Apagar
     if (i >= 0) {
         dispositivos[i]->apagar();
         db.actualizarEstado(dispositivos[i]);
+        db.registrarEvento(dispositivos[i]->getNombre(), "Apagado");
         actualizarLista();
     }
 }
@@ -59,6 +61,7 @@ void MainWindow::on_pushButton_3_clicked() {  // Fallo
     if (i >= 0) {
         dispositivos[i]->setFallo();
         db.actualizarEstado(dispositivos[i]);
+        db.registrarEvento(dispositivos[i]->getNombre(), "Fallo");
         actualizarLista();
     }
 }

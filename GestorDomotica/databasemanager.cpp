@@ -2,6 +2,16 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QVariant>
+#include <QDateTime>
+
+void DatabaseManager::registrarEvento(QString dispositivo, QString accion) {
+    QSqlQuery query;
+    query.prepare("INSERT INTO eventos (dispositivo, accion, fecha) VALUES (:d, :a, :f)");
+    query.bindValue(":d", dispositivo);
+    query.bindValue(":a", accion);
+    query.bindValue(":f", QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
+    query.exec();
+}
 
 DatabaseManager::DatabaseManager() {}
 
@@ -18,6 +28,11 @@ bool DatabaseManager::conectar() {
                "tipo TEXT,"
                "estado TEXT)");
     return true;
+    query.exec("CREATE TABLE IF NOT EXISTS eventos ("
+               "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+               "dispositivo TEXT,"
+               "accion TEXT,"
+               "fecha TEXT)");
 }
 
 void DatabaseManager::guardarDispositivo(Dispositivo* d) {

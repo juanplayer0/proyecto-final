@@ -14,6 +14,7 @@ public:
     void guardarDispositivo(Dispositivo* d);
     QList<Dispositivo*> cargarDispositivos();
     void actualizarEstado(Dispositivo* d);
+    void registrarEvento(QString dispositivo, QString accion);
 
 private:
     QSqlDatabase db;
