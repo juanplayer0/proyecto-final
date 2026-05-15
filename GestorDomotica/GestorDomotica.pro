@@ -11,15 +11,18 @@ CONFIG += c++11
 SOURCES += \
     databasemanager.cpp \
     dispositivo.cpp \
+    historialdialog.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     databasemanager.h \
     dispositivo.h \
+    historialdialog.h \
     mainwindow.h
 
 FORMS += \
+    historialdialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.

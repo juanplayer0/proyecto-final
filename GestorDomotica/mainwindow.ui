@@ -66,14 +66,27 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>260</y>
+      <x>180</x>
+      <y>250</y>
       <width>131</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
      <string>agregar dispositivo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>250</y>
+      <width>80</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ver historial</string>
     </property>
    </widget>
   </widget>

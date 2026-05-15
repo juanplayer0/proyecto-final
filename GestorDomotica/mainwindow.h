@@ -22,6 +22,7 @@ private slots:
     void on_pushButton_2_clicked();  // Encender
     void on_pushButton_3_clicked();  // Apagar
     void on_pushButton_4_clicked();  // Fallo
+    void on_pushButton_5_clicked(); // Ver historial
 
 private:
     Ui::MainWindow *ui;
@@ -29,5 +30,6 @@ private:
     void actualizarLista();
     DatabaseManager db;
 };
+
 
 #endif // MAINWINDOW_H

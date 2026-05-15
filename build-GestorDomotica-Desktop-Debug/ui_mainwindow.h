@@ -29,6 +29,7 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
+    QPushButton *pushButton_5;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -53,7 +54,10 @@ public:
         pushButton_3->setGeometry(QRect(590, 180, 80, 23));
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(310, 260, 131, 23));
+        pushButton_4->setGeometry(QRect(180, 250, 131, 23));
+        pushButton_5 = new QPushButton(centralwidget);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setGeometry(QRect(460, 250, 80, 23));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -75,6 +79,7 @@ public:
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "apagar", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "fallo", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "agregar dispositivo", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "ver historial", nullptr));
     } // retranslateUi
 
 };

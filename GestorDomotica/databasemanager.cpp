@@ -27,12 +27,14 @@ bool DatabaseManager::conectar() {
                "nombre TEXT,"
                "tipo TEXT,"
                "estado TEXT)");
-    return true;
+
     query.exec("CREATE TABLE IF NOT EXISTS eventos ("
                "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                "dispositivo TEXT,"
                "accion TEXT,"
                "fecha TEXT)");
+
+    return true;
 }
 
 void DatabaseManager::guardarDispositivo(Dispositivo* d) {

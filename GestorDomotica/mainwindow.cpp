@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QInputDialog>
+#include "historialdialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -64,4 +65,8 @@ void MainWindow::on_pushButton_3_clicked() {  // Fallo
         db.registrarEvento(dispositivos[i]->getNombre(), "Fallo");
         actualizarLista();
     }
+}
+void MainWindow::on_pushButton_5_clicked() {  // Ver historial
+    HistorialDialog dialog(&db, this);
+    dialog.exec();
 }
