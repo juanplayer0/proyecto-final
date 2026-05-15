@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "databasemanager.h"
 #include <QMainWindow>
 #include <QList>
 #include "dispositivo.h"
@@ -26,6 +27,7 @@ private:
     Ui::MainWindow *ui;
     QList<Dispositivo*> dispositivos;
     void actualizarLista();
+    DatabaseManager db;
 };
 
 #endif // MAINWINDOW_H
