@@ -1,0 +1,9 @@
+digraph "GestorDomotica" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_388b922a30c69c61d0a4cb2cbfe01a3c [shape=box, label="GestorDomotica", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_388b922a30c69c61d0a4cb2cbfe01a3c.html"];
+  dir_8e5054a3572689a0923dee8c055cb3b1 [shape=box label="build-GestorDomotica-Desktop-Debug" URL="dir_8e5054a3572689a0923dee8c055cb3b1.html"];
+  dir_388b922a30c69c61d0a4cb2cbfe01a3c->dir_8e5054a3572689a0923dee8c055cb3b1 [headlabel="2", labeldistance=1.5 headhref="dir_000001_000000.html"];
+  dir_8e5054a3572689a0923dee8c055cb3b1->dir_388b922a30c69c61d0a4cb2cbfe01a3c [headlabel="2", labeldistance=1.5 headhref="dir_000000_000001.html"];
+}
